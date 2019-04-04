@@ -1915,12 +1915,8 @@ const doTheThing = () => {
         </div>
     `
 
-    const html = () => {
-        return {__html: appString}
-    }
-
     var app = (
-        <div dangerouslySetInnerHTML={html}></div>
+        <div dangerouslySetInnerHTML={{__html: appString}}></div>
     )
     
     ReactDOM.render(
@@ -1928,5 +1924,10 @@ const doTheThing = () => {
         document.getElementById('target')
     )
 }
+
+var start = Date.now()
+doTheThing()
+var end = Date.now() - start
+console.log(end)
 
 export default doTheThing

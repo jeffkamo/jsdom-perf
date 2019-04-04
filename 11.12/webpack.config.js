@@ -2,6 +2,7 @@ var webpack = require('webpack')
 var path = require('path')
 
 module.exports = {
+  target: 'web',
   mode: 'development',
   entry: path.resolve(__dirname, 'big-with-react.js'),
   module: {
@@ -16,6 +17,5 @@ module.exports = {
   output: {
     filename: 'big-with-react.js',
     path: __dirname + '/dist',
-    libraryTarget: 'commonjs2'
   }
 }
