@@ -15,10 +15,5 @@
             "polyfill": true,
             "regenerator": false
         }]
-    ],
-    "env": {
-        "development": {
-            "presets": ["react-hmre"]
-        }
-    }
+    ]
 }

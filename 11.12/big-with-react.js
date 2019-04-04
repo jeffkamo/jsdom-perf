@@ -1,6 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+class MyComponent extends React.Component {
+    render() {
+        return this.props.children
+    }
+}
+
 const doTheThing = () => {
     var appString = `        
         <div class="pw-lockup">
@@ -1916,18 +1922,19 @@ const doTheThing = () => {
     `
 
     var app = (
-        <div dangerouslySetInnerHTML={{__html: appString}}></div>
+        <MyComponent>
+            <div dangerouslySetInnerHTML={{__html: appString}}></div>
+        </MyComponent>
     )
-    
+
     ReactDOM.render(
         app,
-        document.getElementById('target')
+        document.getElementById('target'),
+        () => {
+            const e = new window.Event('done', {bubbles: true})
+            window.dispatchEvent(e)
+        }
     )
 }
 
-var start = Date.now()
 doTheThing()
-var end = Date.now() - start
-console.log(end)
-
-export default doTheThing

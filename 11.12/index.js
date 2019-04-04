@@ -1,6 +1,8 @@
 const jsdom = require('jsdom')
 const {JSDOM} = jsdom
 
+var start = Date.now()
+
 const dom = `<html>
 <head></head>
 <body>
@@ -9,11 +11,17 @@ const dom = `<html>
 </body>
 </html>`
 
-new JSDOM(dom, {
+const d = new JSDOM(dom, {
     contentType: 'text/html',
     pretendToBeVisual: true,
     runScripts: 'dangerously',
     resources: 'usable',
     strictSSL: true,
     url: 'http://localhost'
+})
+
+d.window.addEventListener('done', () => {
+    var end = Date.now() - start
+    console.log(end)
+    // console.log(d.window.document.querySelector('.pw-search__input'))
 })
