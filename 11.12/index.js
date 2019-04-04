@@ -1,4 +1,3 @@
-const React = require('react')
 const jsdom = require('jsdom')
 const {JSDOM} = jsdom
 const doTheThing = require("./dist/big-with-react.js").default
