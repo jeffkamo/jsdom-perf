@@ -109,9 +109,3 @@ seq 100 200 | xargs -I @ npm start -s
 205
 212
 ```
-
-
-## Results (w/ React)
-
-```
-```
