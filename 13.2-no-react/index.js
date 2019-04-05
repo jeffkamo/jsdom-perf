@@ -4,7 +4,7 @@ const {JSDOM} = jsdom
 const dom = new JSDOM(
     `<html>
         <head>
-            <script type="text/javascript" src="file:///Users/Atsushi/Mobify/_lab/jsdom-perf/13.2\ small/big.js"></script>
+            <script type="text/javascript" src="file:///Users/Atsushi/Mobify/_lab/jsdom-perf/13.2-no-react/big.js"></script>
             <script type="text/javascript">
                 var start = Date.now()
                 doTheThing(document)
