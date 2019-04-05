@@ -4,7 +4,7 @@ var path = require('path')
 module.exports = {
   target: 'web',
   mode: 'development',
-  entry: path.resolve(__dirname, 'big-with-react.js'),
+  entry: path.resolve(__dirname, 'big.js'),
   module: {
     rules: [
       {
@@ -15,7 +15,7 @@ module.exports = {
     ]
   },
   output: {
-    filename: 'big-with-react.js',
+    filename: 'big.js',
     path: __dirname + '/dist',
   }
 }

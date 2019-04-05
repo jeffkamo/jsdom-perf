@@ -7,7 +7,7 @@ const dom = `<html>
 <head></head>
 <body>
     <div id="target"></div>
-    <script type="text/javascript" src="file:///Users/Atsushi/Mobify/_lab/jsdom-perf/11.12/dist/big-with-react.js"></script>
+    <script type="text/javascript" src="file:///Users/Atsushi/Mobify/_lab/jsdom-perf/11.12-react/dist/big.js"></script>
 </body>
 </html>`
 
